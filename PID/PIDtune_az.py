@@ -12,6 +12,7 @@ com.get_privilege()
 time.sleep(1)
 com.drive("drive", "on")
 com.drive("contactor", "on")
+com.record("savespec", save=True)
 
 
 dist_list = [10]
@@ -56,7 +57,8 @@ for dist in dist_list:
                         time.sleep(5)
 
 com.drive("drive", "off")
-com.drive("contactor", "off") 
+com.drive("contactor", "off")
+com.record("savespec", save=False)
 
 time.sleep(1)
 com.quit_privilege()
